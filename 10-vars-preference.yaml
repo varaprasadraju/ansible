@@ -4,6 +4,8 @@
     course: "Devops with aws from play level" # variable values
     duration: "120hrs"
     trainer: "siva kumar"
+  vars_files:
+  - vars.yaml
   vars_prompt: # prompts the values
   - name: course
     prompt: please enter the course name
@@ -17,4 +19,12 @@
     ansible.builtin.debug:
       msg: "Hi, I am learning {{ course }}"
   
-  
+
+  #1 Command line/args
+  #2 Task level
+  #3 From files
+  #4 Prompt
+  #5 play level
+  #6 inventory level
+  #7 Roles
+
