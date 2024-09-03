@@ -1,13 +1,16 @@
 - name: variable to print
   hosts: web
-  vars_prompt: # play level, all task in this play have access to this
+  vars_prompt: # prompts the values
   - name: course
     prompt: please enter the course name
-  - name: hours
+    private: false
+  - name: duraion
+    private: false
     prompt: please enter the training hours
   - name: trainer
+    private: true
     prompt: please enthe the trainer name
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "Hi, I am learning {{ course }}, duration is: {{ hours }}, trainer: {{ trainer }}"
+      msg: "Hi, I am learning {{ course }}, duration is: {{ duration }}, trainer: {{ trainer }}"
