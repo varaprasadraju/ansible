@@ -3,7 +3,7 @@
   become: yes # take sudo access
   tasks:      # List of task, modules, connections
   - name: install nginx #task name
-     ansible.builtin.package: # heterogeneous module that can work for all distributions
+    ansible.builtin.package: # heterogeneous module that can work for all distributions
       name: nginx
       state: present
 
