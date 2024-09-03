@@ -16,7 +16,7 @@
       ci: Jenkins   # string
       cm: Ansible
       cloud: AWS
-      aws:    # Lists
+      AWS:    # Lists
       - IAM
       - servers
       - S3
