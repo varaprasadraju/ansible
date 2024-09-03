@@ -6,7 +6,7 @@
   #   prompt: pleae enthe the number
   #   private: false    # not confidential
   vars:
-  my_number: 135    # number
+    my_number: 135    # number
   tasks:
   - name: print this if less than 10
     ansible.builtin.debug:
