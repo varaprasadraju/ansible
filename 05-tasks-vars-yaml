@@ -13,7 +13,7 @@
     vars: # task level variables
     course: ansible
     ansible.builtin.debug:
-        msg: "Hi, I am learning {{ course }}, duration is: {{ duration }}, trainer: {{ trainer }}"
+      msg: "Hi, I am learning {{ course }}, duration is: {{ duration }}, trainer: {{ trainer }}"
 
   - name: print the information again and again
     ansible.builtin.debug:
