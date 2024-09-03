@@ -10,4 +10,5 @@
     ansible.builtin.service:  # heterogeneous module that can work for all distributions
       name: nginx
       state: started
+      enabled: yes
 
