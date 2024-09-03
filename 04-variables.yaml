@@ -1,7 +1,7 @@
 - name: variable to print
   hosts: web
-  vars:
-    course: "Devops with aws"
+  vars: # variable
+    course: "Devops with aws" # variable values
     duration: "120hrs"
     trainer: "siva kumar"
   tasks:
