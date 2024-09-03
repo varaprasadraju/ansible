@@ -1,0 +1,5 @@
+- name: play-01
+  hosts: web  # Which hosts your ansible want to connect
+  tasks:      # List of task, modules, connections
+  - name: play-01 task-01
+    ansible.builtin.debug:
