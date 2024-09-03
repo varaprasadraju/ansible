@@ -1,5 +1,6 @@
 - name: devops course information
   hosts: local    # to run in ansible server
+  connection: local
   vars:
     course: "DevOps with AWS"   # String
     duration: 120   # Integer/Number
