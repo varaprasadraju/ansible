@@ -3,7 +3,7 @@
   hosts: web  # Which hosts your ansible want to connect
   tasks:      # List of task, modules, connections
   - name: play-01 task-01
-    ansible.builtin.debug:
+    ansible.builtin.debug:  # module name
       msg: this is from play-01 and task-01
 
 #PLAY-01
@@ -11,5 +11,5 @@
   hosts: web  # Which hosts your ansible want to connect
   tasks:      # List of task, modules, connections
   - name: play-02 task-02
-    ansible.builtin.debug:
+    ansible.builtin.debug:  # module name
       msg: this is from play-02 and task-02
