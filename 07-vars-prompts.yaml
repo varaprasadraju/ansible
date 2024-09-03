@@ -3,10 +3,10 @@
   vars_prompt: # play level, all task in this play have access to this
   - name: course
     prompt: please enter the course name
-  - name: hours
+  - name: duration
     prompt: please enter the training hours
   - name: trainer
-    prompt: please enthe the trainer name    
+    prompt: please enthe the trainer name
   tasks:
   - name: print the information
     ansible.builtin.debug:
