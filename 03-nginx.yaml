@@ -8,6 +8,6 @@
       state: present
   - name: Start service nginx, if not started #task name
     ansible.builtin.service:  # heterogeneous module that can work for all distributions
-      name: httpd
+      name: nginx
       state: started
 
