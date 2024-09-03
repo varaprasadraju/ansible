@@ -1,19 +1,19 @@
 - name: check the number is less than 10 or not
   hosts: local    # to run in ansible server
   connection: local
-  vars_prompt:
-  - name: my_number
-    prompt: pleae enthe the number
-    private: false    # not confidential
-  # vars:
-  # my_number: 135    # number
+  # vars_prompt:
+  # - name: my_number
+  #   prompt: pleae enthe the number
+  #   private: false    # not confidential
+  vars:
+  my_number: 135    # number
   tasks:
   - name: print this if less than 10
     ansible.builtin.debug:
       msg: "Given number {{ my_number }} is less than 10"
-    when: my_number | int < 10  # conditional expression
+    when: my_number < 10  # conditional expression
 
   - name: print this if greater than or equal to 10
     ansible.builtin.debug:
       msg: "Given number {{ my_number }} is greater than or equal to 10"
-    when: my_number | int >= 10  # conditional expression
+    when: my_number >= 10  # conditional expression
