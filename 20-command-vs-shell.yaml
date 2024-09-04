@@ -2,5 +2,5 @@
   hosts: local
   connection: local
   tasks:
-  - name: excute the command
+  - name: execute the command
     anible.builtin.command: ls -ltr > /tmp/output.txt
