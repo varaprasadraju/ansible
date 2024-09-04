@@ -36,5 +36,5 @@
         name: "Devops with AWS"
         duration: 120
         trainer: "siva kumar"
-      ansible.builtin.debug:
+    ansible.builtin.debug:
         msg: "{{ course | dict2items }}"
