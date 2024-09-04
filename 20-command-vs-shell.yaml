@@ -1,0 +1,6 @@
+- name: command vs shell
+  hosts: local
+  connection: shell
+  tasks:
+  - name: excute the command
+    anible.builtin.command: ls -ltr > /tmp/output.txt
