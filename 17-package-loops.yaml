@@ -1,0 +1,13 @@
+- name: loops
+  hosts: web
+  become: yes
+  tasks:
+  - name: print names
+    ansible.builtin.package:
+      name: "{{ item }}"    # Need to mention item for loops
+      state: present   
+    loop:   #loop 
+    - mysql
+    - nginx
+    - postfix
+    - httpd    
