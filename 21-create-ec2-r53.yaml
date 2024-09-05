@@ -1,23 +1,24 @@
 - name: create ec2 and r53 records
   hosts: local
   connection: local
+  # assignment
+  # move this to vars_files
   vars:
-    subnet_id: subnet-0d75efb0dad6fbbaf
-    sg_id: sg-02c82727704554865
-    ami_id: ami-09c813fb71547fc4f
+    subnet_id: subnet-0d75efb0dad6fbbaf   # replace with your subnet id
+    sg_id: "sg-02c82727704554865"
+    ami_id: "ami-09c813fb71547fc4f"
     instances:
     - mysql
     - backend
     - frontend
     zone: prasadking.xyz
   tasks:
-  - name: ansible install botocore and boto3
+  - name: ansible install boto3 and botobcore
     ansible.builtin.pip:
       name:
       - boto3
       - botocore
       executable: pip3.9
-  tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{ item }}"
